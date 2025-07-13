@@ -1,0 +1,13 @@
+django==5.0.3
+djangorestframework==3.15.1
+
+# Uyumlu CrewAI stack 
+crewai==0.28.8
+langchain==0.1.19
+langchain_community==0.0.38
+langchainhub==0.1.17
+ollama==0.1.8
+
+python-dotenv==1.0.0
+setuptools
+weasyprint==53.3

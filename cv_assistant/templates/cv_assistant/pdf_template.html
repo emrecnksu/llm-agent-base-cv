@@ -1,0 +1,53 @@
+<!-- templates/cv_assistant/pdf_template.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 40px;
+      color: #333;
+    }
+
+    h1, h2, h3, h4 {
+      color: #2c3e50;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 30px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .subsection-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 10px;
+    }
+
+    .cv-block {
+      margin-bottom: 20px;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+  <pre>{{ cv_text }}</pre>
+</body>
+</html>
+

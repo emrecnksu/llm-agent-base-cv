@@ -1,0 +1,58 @@
+<!-- cv_assistant/templates/cv_assistant/improve_result.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Geliştirilmiş CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+  <div class="container mt-5">
+    <div class="card shadow">
+      <div class="card-body">
+        <h1 class="card-title mb-4 text-primary">📄 Geliştirilmiş CV</h1>
+
+        {% if improved_cv %}
+          <pre class="bg-white p-3 border rounded" style="white-space: pre-wrap; font-family: 'Segoe UI', sans-serif;">
+{{ improved_cv }}
+          </pre>
+
+          <div class="mt-4 d-flex gap-2">
+            <a href="{% url 'cv-form' %}" class="btn btn-outline-secondary">Yeni CV Gönder</a>
+            <a href="{% url 'download_pdf' %}?cv={{ improved_cv|urlencode }}" class="btn btn-success">📥 PDF Olarak İndir</a>
+          </div>
+        {% else %}
+          <div class="alert alert-warning mt-3">Henüz bir CV işlenmedi.</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Geliştirilmiş CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+  <div class="container mt-5">
+    <h1 class="mb-4">📄 Geliştirilmiş CV</h1>
+
+    {% if improved_cv %}
+      <div class="border p-4 bg-white shadow-sm rounded">
+        <pre style="white-space: pre-wrap; font-family: 'Segoe UI', sans-serif;">{{ improved_cv }}</pre>
+      </div>
+      <div class="mt-4">
+        <a href="{% url 'cv-form' %}" class="btn btn-primary">Yeni CV gönder</a>
+        <a href="{% url 'download_pdf' %}?cv={{ improved_cv|urlencode }}" class="btn btn-success ms-2">PDF olarak indir</a>
+      </div>
+    {% else %}
+      <p>Henüz CV işlenmedi.</p>
+    {% endif %}
+  </div>
+</body>
+</html> -->
