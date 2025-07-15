@@ -1,13 +1,18 @@
 django==5.0.3
 djangorestframework==3.15.1
 
-# Uyumlu CrewAI stack 
+# Core LLM & AI Stack
 crewai==0.28.8
 langchain==0.1.19
 langchain_community==0.0.38
 langchainhub==0.1.17
 ollama==0.1.8
 
-python-dotenv==1.0.0
-setuptools
+# PDF Export
 weasyprint==53.3
+
+# Env Support
+python-dotenv==1.0.0
+
+# Packaging
+setuptools
